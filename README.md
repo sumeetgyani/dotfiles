@@ -1,2 +1,6 @@
 # dotfiles
-test
+i3
+bash
+vim
+rofi
+
