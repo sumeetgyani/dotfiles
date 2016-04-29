@@ -23,7 +23,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
 export JAVA_FONTS=/usr/share/fonts/TTF
-export EDITOR=/usr/bin/nano
+export EDITOR=/usr/bin/vim
 export BROWSER=/usr/bin/palemoon
 
 alias ls='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -79,5 +79,5 @@ alias hack='cmatrix'
 alias vi='vim'
 alias brc='vim ~/.bashrc'
 alias vrc='vim ~/.vimrc'
-alias config='vim ~/.i3/config'
+alias con='vim ~/.i3/config'
 alias notes='cd ~/notes'

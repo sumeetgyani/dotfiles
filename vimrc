@@ -1,13 +1,16 @@
 filetype plugin indent on
 syntax on
 
+" easier to type
 nnoremap ; :
 vnoremap ; :
+" move based on screen rather than actual lines
 nnoremap j gj
 nnoremap k gk
+" stay consistent with C and D
+nnoremap Y y$
 
 set incsearch
-
 " Set relative number, with current line being absolute
 set rnu
 set number
