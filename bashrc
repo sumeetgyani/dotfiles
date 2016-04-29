@@ -40,7 +40,6 @@ alias inst='sudo pacman -S'
 alias mirrors='sudo pacman-mirrors -g'
 alias db='sudo pacman -Syy'
 
-# ex - archive extractor
 # usage: ex <file>
 ex ()
 {
@@ -65,7 +64,7 @@ ex ()
 }
 
 # prompt
-PS1='[\u@\h \W]\$ '
+PS1=' '
 
 # =========
 # my stuff
@@ -80,4 +79,5 @@ alias hack='cmatrix'
 alias vi='vim'
 alias brc='vim ~/.bashrc'
 alias vrc='vim ~/.vimrc'
-alias i3config='vim ~/.i3/config'
+alias config='vim ~/.i3/config'
+alias notes='cd ~/notes'
