@@ -3,4 +3,5 @@ i3
 bash
 vim
 rofi
+// credential test
 
