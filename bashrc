@@ -22,8 +22,7 @@ export JAVA_FONTS=/usr/share/fonts/TTF
 export EDITOR=/usr/bin/nano
 export BROWSER=/usr/bin/palemoon
 
-alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ls='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
@@ -76,6 +75,7 @@ PS1='[\u@\h \W]\$ '
 
 # todo, add to .xinitrc instead
 setxkbmap -option caps:escape
+set -o vi
 
 alias hack='cmatrix'
 alias vi='vim'
