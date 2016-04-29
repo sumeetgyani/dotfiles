@@ -7,6 +7,8 @@ nnoremap j gj
 nnoremap k gk
 
 set incsearch
+
+" Set relative number, with current line being absolute
 set rnu
 set number
 

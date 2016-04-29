@@ -1,3 +1,7 @@
+# ==============================================
+# distro defaults with some slight modifications
+# ==============================================
+
 if [ -f /etc/bash_completion ]; then
 	    . /etc/bash_completion
 fi
@@ -23,20 +27,18 @@ export EDITOR=/usr/bin/nano
 export BROWSER=/usr/bin/palemoon
 
 alias ls='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -a'
 alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nano PKGBUILD'
+alias np='vim PKGBUILD'
 alias fixit='sudo rm -f /var/lib/pacman/db.lck'
 alias update='yaourt -Syua'
-alias con='nano $HOME/.i3/config'
-alias comp='nano $HOME/.config/compton.conf'
+alias comp='vim $HOME/.config/compton.conf'
 alias inst='sudo pacman -S'
 alias mirrors='sudo pacman-mirrors -g'
 alias db='sudo pacman -Syy'
-alias printer='system-config-printer'
 
 # ex - archive extractor
 # usage: ex <file>
@@ -47,7 +49,7 @@ ex ()
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
+      *.rar)       unrar x $1   ;;
       *.gz)        gunzip $1    ;;
       *.tar)       tar xf $1    ;;
       *.tbz2)      tar xjf $1   ;;
@@ -65,20 +67,17 @@ ex ()
 # prompt
 PS1='[\u@\h \W]\$ '
 
-# 
-#
+# =========
 # my stuff
-# 
-# 
-# 
-# 
+# =========
 
 # todo, add to .xinitrc instead
 setxkbmap -option caps:escape
+
 set -o vi
 
 alias hack='cmatrix'
 alias vi='vim'
 alias brc='vim ~/.bashrc'
 alias vrc='vim ~/.vimrc'
-alias i3conf='vim ~/.i3/config'
+alias i3config='vim ~/.i3/config'
