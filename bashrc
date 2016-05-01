@@ -27,7 +27,7 @@ export EDITOR=/usr/bin/vim
 export BROWSER=/usr/bin/palemoon
 
 alias ls='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -a'
+alias la='ls -A'
 alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
@@ -80,4 +80,4 @@ alias vi='vim'
 alias brc='vim ~/.bashrc'
 alias vrc='vim ~/.vimrc'
 alias con='vim ~/.i3/config'
-alias notes='cd ~/notes'
+alias notes='clear; cd ~/notes; ls'
