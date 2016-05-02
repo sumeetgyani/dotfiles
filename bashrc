@@ -70,9 +70,6 @@ PS1=' '
 # my stuff
 # =========
 
-# todo, add to .xinitrc instead
-setxkbmap -option caps:escape
-
 set -o vi
 
 alias hack='cmatrix'
@@ -82,3 +79,4 @@ alias vrc='vim ~/.vimrc'
 alias con='vim ~/.i3/config'
 alias notes='clear; cd ~/notes; ls'
 alias dotfiles='clear; cd ~/dotfiles; ls'
+alias scripts='clear; cd ~/scripts; ls'
