@@ -3,7 +3,7 @@
 # ==============================================
 
 if [ -f /etc/bash_completion ]; then
-	    . /etc/bash_completion
+  . /etc/bash_completion
 fi
 
 xhost +local:root > /dev/null 2>&1
@@ -70,9 +70,12 @@ PS1=' '
 # my stuff
 # =========
 
+export PATH="$PATH:/home/bolshoi/scripts"
 set -o vi
 setxkbmap -option caps:escape
 
+alias gcm='git commit -am'
+alias gp='git push'
 alias hack='cmatrix'
 alias vi='vim'
 alias brc='vim ~/.bashrc'
@@ -81,4 +84,3 @@ alias con='vim ~/.i3/config'
 alias notes='clear; cd ~/notes; ls'
 alias dotfiles='clear; cd ~/dotfiles; ls'
 alias scripts='clear; cd ~/scripts; ls'
-export PATH="$PATH:/home/bolshoi/scripts"

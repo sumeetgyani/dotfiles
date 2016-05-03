@@ -1,23 +1,29 @@
+" Vundle stuff
+set nocompatible              
+filetype off                 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugins
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-commentary'
+
+call vundle#end()
+
 filetype plugin indent on
 syntax on
 
-" easier to type
-nnoremap ; :
-vnoremap ; :
-" move based on screen rather than actual lines
-nnoremap j gj
-nnoremap k gk
-" stay consistent with C and D
-nnoremap Y y$
-" avoid entering Ex mode, replace with formatting whole file
-nnoremap Q gg=G
-
-set incsearch
-" Set relative number, with current line being absolute
-set rnu
+set incsearch 
+set relativenumber  
 set number
-
-" Always use 2 spaces for tabs
-set expandtab
+set expandtab         
 set shiftwidth=2
 set softtabstop=2
+
+map ; :
+nmap j gj
+nmap k gk
+nmap Y y$ 
+nmap Q mzgg=G'z
+imap [ []<ESC>i
+imap ( ()<ESC>i
