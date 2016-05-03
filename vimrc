@@ -9,6 +9,8 @@ nnoremap j gj
 nnoremap k gk
 " stay consistent with C and D
 nnoremap Y y$
+" avoid entering Ex mode, replace with formatting whole file
+nnoremap Q gg=G
 
 set incsearch
 " Set relative number, with current line being absolute

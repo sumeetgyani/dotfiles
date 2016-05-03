@@ -71,6 +71,7 @@ PS1=' '
 # =========
 
 set -o vi
+setxkbmap -option caps:escape
 
 alias hack='cmatrix'
 alias vi='vim'
@@ -80,3 +81,4 @@ alias con='vim ~/.i3/config'
 alias notes='clear; cd ~/notes; ls'
 alias dotfiles='clear; cd ~/dotfiles; ls'
 alias scripts='clear; cd ~/scripts; ls'
+export PATH="$PATH:/home/bolshoi/scripts"

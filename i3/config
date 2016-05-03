@@ -14,13 +14,16 @@ bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # Kill focused window
-bindsym $mod+q kill
+bindsym $mod+p kill
 
 # Start program launcher
 bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 15 -bw 10 -font "System San Francisco Display 18" -hide-scrollbar
 
 # Audio
 bindsym $mod+a exec konsole -e 'alsamixer'
+
+# Composite Manager
+bindsym $mod+z exec dcompmgr --gl --no-fade >/dev/null 2>&1
 
 # Start Applications
 bindsym $mod+c exec google-chrome-stable
@@ -101,7 +104,6 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
-for_window [class="mpv"] floating enable border normal
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -111,10 +113,11 @@ bindsym $mod+Shift+r restart
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, (r)eboot, (s)hutdown
+set $mode_system (l)ock, (e)xit, (r)eboot, (h)ibernate, (s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock -c 000000 -n, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit suspend, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym s exec --no-startup-id i3exit shutdown, mode "default"
 
@@ -136,12 +139,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-set $bg-color           #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
-
 # Status bar
 bar {
 	status_command i3status -c ~/dotfiles/i3status.conf
@@ -161,24 +158,15 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
-# exec --no-startup-id blueman
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id compton -b
-exec --no-startup-id dcompmgr --gl --no-fade >/dev/null 2>&1
 exec --no-startup-id volumeicon
-exec --no-startup-id i3-msg 'workspace 1; exec konsole'
+
+# Dual monitors at startup
+exec_always xrandr --output DVI-D-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate right --output DVI-I-1 --off --output DVI-I-0 --off --output DP-1.8 --primary --mode 3440x1440 --pos 1440x0 --rotate normal --output DP-0 --off
+
+# Wallpaper
+exec_always feh --bg-fill ~/Downloads/city.jpg --bg-fill ~/Downloads/scar.jpg
 
 # Theme colors
 client.focused #2ECC71 #2ECC71 #000000 #FFFFFF
 client.unfocused #222222 #222222 #2ECC71 #222222
 client.urgent #274D01 #900000 #FFFFFF #900000
-
-# Change keybindings
-exec_always setxkbmap -option caps:escape
-
-# Wallpaper
-exec_always feh --bg-fill ~/Downloads/twwb.jpg
-
-# Dual monitors at startup
-exec_always xrandr --output DVI-D-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate right --output DVI-I-1 --off --output DVI-I-0 --off --output DP-1.8 --primary --mode 3440x1440 --pos 1440x0 --rotate normal --output DP-0 --off
