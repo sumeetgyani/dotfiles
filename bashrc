@@ -74,7 +74,9 @@ export PATH="$PATH:/home/bolshoi/scripts"
 set -o vi
 setxkbmap -option caps:escape
 
-alias gcm='git commit -am'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
 alias gp='git push'
 alias hack='cmatrix'
 alias vi='vim'
