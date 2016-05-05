@@ -7,6 +7,7 @@ call vundle#begin()
 " Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
@@ -14,16 +15,13 @@ filetype plugin indent on
 syntax on
 
 set incsearch 
-set relativenumber  
-set number
-set expandtab         
-set shiftwidth=2
-set softtabstop=2
+set relativenumber number
+set expandtab shiftwidth=2 softtabstop=2
 
 map ; :
+map <C-f> mzgg=G'z  "reformat entire file
 nmap j gj
 nmap k gk
 nmap Y y$ 
-nmap Q mzgg=G'z
 imap [ []<ESC>i
 imap ( ()<ESC>i

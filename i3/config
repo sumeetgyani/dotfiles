@@ -17,7 +17,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+p kill
 
 # Start program launcher
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 15 -bw 10 -font "System San Francisco Display 18" -hide-scrollbar
+bindsym $mod+d exec rofi -show run -fuzzy -lines 3 -eh 2 -width 15 -bw 10 -font "System San Francisco Display 18" -hide-scrollbar
 
 # Audio
 bindsym $mod+a exec konsole -e 'alsamixer'
@@ -28,7 +28,6 @@ bindsym $mod+z exec dcompmgr --gl --no-fade >/dev/null 2>&1
 # Start Applications
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Return exec konsole
-bindsym $mod+Ctrl+r exec konsole -e 'ranger'
 bindsym $mod+Ctrl+p exec gksu pcmanfm
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -164,7 +163,7 @@ exec --no-startup-id volumeicon
 exec_always xrandr --output DVI-D-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate right --output DVI-I-1 --off --output DVI-I-0 --off --output DP-1.8 --primary --mode 3440x1440 --pos 1440x0 --rotate normal --output DP-0 --off
 
 # Wallpaper
-exec_always feh --bg-fill ~/Downloads/city.jpg --bg-fill ~/Downloads/scar.jpg
+exec_always feh --bg-fill ~/Downloads/scar.jpg --bg-fill ~/Downloads/scar.jpg
 
 # Theme colors
 client.focused #2ECC71 #2ECC71 #000000 #FFFFFF
