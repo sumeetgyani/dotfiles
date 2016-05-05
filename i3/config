@@ -19,6 +19,9 @@ bindsym $mod+p kill
 # Start program launcher
 bindsym $mod+d exec rofi -show run -fuzzy -lines 3 -eh 2 -width 15 -bw 10 -font "System San Francisco Display 18" -hide-scrollbar
 
+# Start program launcher
+bindsym $mod+v exec konsole -e 'vifm'
+
 # Audio
 bindsym $mod+a exec konsole -e 'alsamixer'
 
