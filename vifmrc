@@ -1,5 +1,5 @@
 " vim: filetype=vim
-colorscheme Default
+colorscheme solarized-dark
 
 set vicmd=vim
 set trash
@@ -22,15 +22,6 @@ set incsearch
 if !has('win')
   set slowfs=curlftpfs
 endif
-
-" Marks
-mark h ~/
-mark s ~/scripts/
-mark d ~/dotfiles/
-mark n ~/notes/
-mark m ~/hard_drive/Movies/
-mark c ~/hard_drive/Television/Comedy/
-mark t ~/hard_drive/torrents/
 
 " :com[mand][!] command_name action
 " The following macros can be used in a command
@@ -87,19 +78,18 @@ filetype *.torrent qtorrent %f &
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
       \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
-" Start shell in current directory
-nnoremap s :shell<cr>
+" Marks
+mark h ~/
+mark s ~/scripts/
+mark d ~/dotfiles/
+mark n ~/notes/
+mark m ~/hard_drive/Movies/
+mark c ~/hard_drive/Television/Comedy/
+mark t ~/hard_drive/torrents/
 
-" Display sorting dialog
-nnoremap S :sort<cr>
-
-" Toggle visibility of preview window
-nnoremap w :view<cr>
-vnoremap w :view<cr>gv
-
-" Open vim to edit vifmrc and apply settings after returning to vifm
-nnoremap ,c :write | execute ':!vim $MYVIFMRC' | restart<cr>
-
-" My stuff
+" Mappings
 map ; : 
+nnoremap s :shell<cr>
+nnoremap q ZZ
 nnoremap cc :rename<cr>
+nnoremap ,c :write | execute ':!vim $MYVIFMRC' | restart<cr>

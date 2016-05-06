@@ -70,6 +70,18 @@ PS1=' '
 # my stuff
 # =========
 
+function mt {
+  if [ -n "$1" ]; then
+    cd $1
+    if [ $? -eq 0 ]; then
+      clear
+      ls
+    fi
+  else
+    echo 'usage: mt [directory]'
+  fi
+}
+
 export PATH="$PATH:/home/bolshoi/scripts"
 set -o vi
 setxkbmap -option caps:escape
@@ -84,6 +96,6 @@ alias brc='vim ~/.bashrc'
 alias vrc='vim ~/.vimrc'
 alias vifmrc='vim ~/dotfiles/vifmrc'
 alias con='vim ~/.i3/config'
-alias notes='clear; cd ~/notes; ls'
-alias dotfiles='clear; cd ~/dotfiles; ls'
-alias scripts='clear; cd ~/scripts; ls'
+alias notes='mt ~/notes/'
+alias dotfiles='mt ~/dotfiles/'
+alias scripts='mt ~/scripts/'
