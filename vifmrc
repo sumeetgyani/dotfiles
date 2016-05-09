@@ -72,7 +72,7 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
       \ gpicview %c,
 
 " Torrent
-filetype *.torrent qtorrent %f &
+filetype *.torrent deluge %f &
 
 " What should be saved automatically between vifm runs
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
@@ -80,8 +80,8 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Marks
 mark h ~/
+mark d ~/Downloads/
 mark s ~/scripts/
-mark d ~/dotfiles/
 mark n ~/notes/
 mark m ~/hard_drive/Movies/
 mark c ~/hard_drive/Television/Comedy/
