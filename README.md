@@ -1,7 +1,6 @@
 # dotfiles
-i3
-bash
-vim
-rofi
-// credential test
-
+- i3 (and i3status)
+- bash
+- vim
+- vifm
+- rofi (todo)
