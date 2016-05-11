@@ -10,12 +10,18 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/syntastic'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'alvan/vim-closetag'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 
 " My stuff
 filetype plugin indent on
 syntax on
+let loaded_matchparen=1
 let mapleader=' '
 
 set incsearch ignorecase smartcase 
@@ -35,5 +41,4 @@ nmap j gj
 nmap k gk
 nmap Y y$ 
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
-imap <tab> <C-p>
 imap <C-f> <C-x><C-f>
