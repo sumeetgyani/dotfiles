@@ -1,6 +1,6 @@
 " Vundle stuff
-set nocompatible              
-filetype off                 
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -15,6 +15,7 @@ Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
+Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 
@@ -42,3 +43,5 @@ nmap k gk
 nmap Y y$ 
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
 imap <C-f> <C-x><C-f>
+
+let g:ctrlp_custom_ignore = 'node_modules/'
