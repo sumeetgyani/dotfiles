@@ -16,6 +16,7 @@ Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'chrisgillis/vim-bootstrap3-snippets'
+Plugin 'wookiehangover/jshint.vim'
 
 call vundle#end()
 
