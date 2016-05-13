@@ -1,5 +1,4 @@
 " Vundle stuff
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -16,6 +15,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
+Plugin 'chrisgillis/vim-bootstrap3-snippets'
 
 call vundle#end()
 
@@ -28,6 +28,7 @@ let mapleader=' '
 set incsearch ignorecase smartcase 
 set relativenumber number
 set expandtab shiftwidth=2 softtabstop=2
+set wildmenu
 
 map ; :
 nnoremap <C-e> 3<C-e>
