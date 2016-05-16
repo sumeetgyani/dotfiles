@@ -1,5 +1,6 @@
-# Mod1=<Alt>, Mod4=<Super> 
+# Mod1=<Alt>, Mod4=<Super>
 set $mod Mod4
+set $terminal gnome-terminal
 
 # Border style
 new_window pixel 2
@@ -20,17 +21,14 @@ bindsym $mod+p kill
 bindsym $mod+d exec rofi -show run -fuzzy -lines 3 -eh 2 -width 15 -bw 10 -font "System San Francisco Display 18" -hide-scrollbar
 
 # Start program launcher
-bindsym $mod+v exec konsole -e 'vifm'
-
-# Audio
-bindsym $mod+a exec konsole -e 'alsamixer'
+bindsym $mod+v exec $terminal -e 'vifm'
 
 # Composite Manager
 bindsym $mod+z exec dcompmgr --gl --no-fade >/dev/null 2>&1
 
 # Start Applications
 bindsym $mod+c exec google-chrome-stable
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec $terminal
 bindsym $mod+Ctrl+p exec gksu pcmanfm
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -117,42 +115,42 @@ bindsym $mod+Shift+r restart
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, (r)eboot, (h)ibernate, (s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -c 000000 -n, mode "default"
+  bindsym l exec --no-startup-id i3lock -c 000000 -n, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym h exec --no-startup-id i3exit suspend, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym s exec --no-startup-id i3exit shutdown, mode "default"
 
-    # exit system mode
+# exit system mode
     bindsym Escape mode "default"
 }
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym h resize grow width 5 px or 5 ppt
-        bindsym l resize shrink width 5 px or 5 ppt
+# These bindings trigger as soon as you enter the resize mode
+  bindsym j resize grow height 5 px or 5 ppt
+    bindsym k resize shrink height 5 px or 5 ppt
+    bindsym h resize grow width 5 px or 5 ppt
+    bindsym l resize shrink width 5 px or 5 ppt
 
-        # exit resize mode: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+# exit resize mode: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 # Status bar
 bar {
-	status_command i3status -c ~/dotfiles/i3status.conf
-	colors {
-		separator #2ECC71
-		background #000000
-		statusline #DDDDDD
-		focused_workspace #FFFFFF #2ECC71 #000000
-		active_workspace #000000 #A4A28D #FFFFFF
-		inactive_workspace #A4A28D #000000 #DDDDDD
-		urgent_workspace #2ECC71 #900000 #FFFFFF
-	}
+  status_command i3status -c ~/dotfiles/i3status.conf
+    colors {
+      separator #2ECC71
+        background #000000
+        statusline #DDDDDD
+        focused_workspace #FFFFFF #2ECC71 #000000
+        active_workspace #000000 #A4A28D #FFFFFF
+        inactive_workspace #A4A28D #000000 #DDDDDD
+        urgent_workspace #2ECC71 #900000 #FFFFFF
+    }
 }
 
 # Autostart applications
