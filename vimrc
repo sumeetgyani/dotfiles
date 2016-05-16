@@ -16,7 +16,8 @@ Plugin 'rking/ag.vim'
 Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'chrisgillis/vim-bootstrap3-snippets'
-Plugin 'wookiehangover/jshint.vim'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -26,24 +27,31 @@ syntax on
 let loaded_matchparen=1
 let mapleader=' '
 
-set incsearch ignorecase smartcase 
+set incsearch ignorecase smartcase
 set relativenumber number
 set expandtab shiftwidth=2 softtabstop=2
 set wildmenu
 
+colorscheme BlackSea
+
 map ; :
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+nmap <leader>t :!npm test<cr>
+nmap <leader>c :colorscheme<space>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
 nmap <leader>u <C-r>
-nmap <leader>f mzgg=G`z
+nmap <leader>bi :BundleInstall<cr>
+nmap <leader>bc :BundleClean<cr>
+nmap <leader>f :Autoformat<cr>
 nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap Q @q
 nmap j gj
 nmap k gk
-nmap Y y$ 
+nmap Y y$
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
 imap <C-f> <C-x><C-f>
 
+au BufWrite * :Autoformat
 let g:ctrlp_custom_ignore = 'node_modules/'
