@@ -1,5 +1,5 @@
 " vim: filetype=vim
-colorscheme solarized-dark
+colorscheme default
 
 set vicmd=vim
 set trash
@@ -80,6 +80,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Marks
 mark h ~/
+mark p ~/projects/
 mark d ~/Downloads/
 mark s ~/scripts/
 mark n ~/notes/
