@@ -38,10 +38,7 @@ nmap k gk
 
 nmap <leader>t :!npm test<cr>
 nmap <leader>o o<esc>
-nmap <leader>O O<esc>
-nmap <leader>u <C-r>
-nmap <leader>e :Explore<cr>
 nmap <leader>f :Autoformat<cr>
-nmap <leader>sc :set spell spelllang=en_us<esc>
+nmap <leader>s :set spell spelllang=en_us<esc>
 
 autocmd! BufWritePost * Neomake
