@@ -3,20 +3,21 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'scrooloose/syntastic'
-Plugin 'christoomey/vim-system-copy'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'alvan/vim-closetag'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'ervandew/supertab'
-Plugin 'SirVer/ultisnips'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'VundleVim/Vundle.vim' "manages plugins
+Plugin 'tpope/vim-commentary' "commenting out text as motion
+Plugin 'tpope/vim-surround' "add/change surrounding elements, like doublequotes
+Plugin 'scrooloose/syntastic' "syntax checker on file save
+Plugin 'christoomey/vim-system-copy' "copy and paste into vim from system clipboard
+Plugin 'jiangmiao/auto-pairs' "automatically add closing paren/quote
+Plugin 'alvan/vim-closetag' "automatically add closing html tags
+Plugin 'ctrlpvim/ctrlp.vim' "fuzzy file finder
+Plugin 'rking/ag.vim' "code searching tool
+Plugin 'ervandew/supertab' "smart autocomplete with tab
+Plugin 'SirVer/ultisnips' "snippets
+Plugin 'Chiel92/vim-autoformat' "autoformat file
+Plugin 'flazz/vim-colorschemes' "colorschemes
+Plugin 'scrooloose/nerdtree' "filetree
+Plugin 'pangloss/vim-javascript' "better syntax/indent for js
 
 call vundle#end()
 
@@ -27,6 +28,7 @@ colorscheme BlackSea
 let loaded_matchparen=1
 let mapleader=' '
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set incsearch ignorecase smartcase
 set relativenumber number
 set expandtab shiftwidth=2 softtabstop=2
@@ -36,7 +38,6 @@ map ; :
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 nmap <leader>t :!npm test<cr>
-nmap <leader>c :colorscheme<space>
 nmap <leader>o o<esc>
 nmap <leader>O O<esc>
 nmap <leader>u <C-r>
@@ -51,5 +52,6 @@ nmap Y y$
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
 imap <C-f> <C-x><C-f>
 
+map <leader>n :NERDTreeToggle<cr>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:ctrlp_custom_ignore = 'node_modules/'
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
