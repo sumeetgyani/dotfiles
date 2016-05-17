@@ -11,7 +11,6 @@ Plug 'ctrlpvim/ctrlp.vim' "fuzzy file finder
 Plug 'rking/ag.vim' "code searching tool
 Plug 'ervandew/supertab' "smart autocomplete with tab
 Plug 'Chiel92/vim-autoformat' "autoformat file
-Plug 'scrooloose/nerdtree' "filetree
 Plug 'pangloss/vim-javascript' "better syntax/indent for js
 
 call plug#end()
@@ -39,6 +38,8 @@ nmap k gk
 nmap <leader>t :!npm test<cr>
 nmap <leader>o o<esc>
 nmap <leader>f :Autoformat<cr>
-nmap <leader>s :set spell spelllang=en_us<esc>
+nmap <leader>sc :set spell spelllang=en_us<esc>
+nmap <leader>e <C-w>v:terminal vifm<cr>
+nmap <leader>s <C-w>v:terminal<cr>
 
 autocmd! BufWritePost * Neomake
