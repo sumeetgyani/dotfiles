@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary' "commenting out text as motion
 Plug 'tpope/vim-surround' "add/change surrounding elements, such as doublequotes
 Plug 'neomake/neomake' "syntax checker on file save
-Plug 'christoomey/vim-system-copy' "copy and paste into vim from system clipboard
 Plug 'jiangmiao/auto-pairs' "automatically add closing paren/quote
 Plug 'alvan/vim-closetag' "automatically add closing html tags
 Plug 'ctrlpvim/ctrlp.vim' "fuzzy file finder
