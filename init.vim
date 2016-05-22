@@ -12,6 +12,7 @@ Plug 'ervandew/supertab' "smart autocomplete with tab
 Plug 'Chiel92/vim-autoformat' "autoformat file
 Plug 'pangloss/vim-javascript' "better syntax/indent for js
 Plug 'SirVer/ultisnips' "snippets
+Plug 'othree/javascript-libraries-syntax.vim' "syntax for angular/lodash/etc.
 
 call plug#end()
 
