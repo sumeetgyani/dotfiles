@@ -91,6 +91,7 @@ mark t ~/hard_drive/torrents/
 " Mappings
 map ; : 
 nnoremap s :shell<cr>
+nnoremap o :mkdir<space>
 nnoremap q ZZ
 nnoremap cc :rename<cr>
 nnoremap ,c :write | execute ':!vim $MYVIFMRC' | restart<cr>
