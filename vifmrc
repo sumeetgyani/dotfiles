@@ -1,5 +1,5 @@
 " vim: filetype=vim
-colorscheme default
+colorscheme solarized-dark
 
 set vicmd=vim
 set trash
