@@ -161,10 +161,10 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id volumeicon
 
 # Dual monitors at startup
-exec_always xrandr --output DVI-D-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate right --output DVI-I-1 --off --output DVI-I-0 --off --output DP-1.8 --primary --mode 3440x1440 --pos 1440x0 --rotate normal --output DP-0 --off
+exec_always xrandr --output DVI-D-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 0x0 --rotate normal --output DVI-I-1 --off --output DVI-I-0 --off 
 
 # Wallpaper
-exec_always feh --bg-fill ~/pictures/loading.png --bg-fill ~/pictures/scar.jpg
+exec_always feh --bg-fill ~/pictures/scar.png --bg-fill ~/pictures/scar.jpg
 
 # Theme colors
 client.focused #CCF3FF #CCF3FF #000000 #FFFFFF

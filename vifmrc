@@ -80,13 +80,16 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Marks
 mark h ~/
-mark p ~/projects/
+mark b ~/books/
 mark d ~/Downloads/
+mark p ~/projects/
 mark s ~/scripts/
 mark n ~/notes/
-mark m ~/hard_drive/Movies/
-mark c ~/hard_drive/Television/Comedy/
 mark t ~/hard_drive/torrents/
+mark M ~/hard_drive/Movies/
+mark T ~/hard_drive/Television/
+mark C ~/hard_drive/Television/Comedy/
+mark D ~/hard_drive/Television/Drama/
 
 " Mappings
 map ; : 

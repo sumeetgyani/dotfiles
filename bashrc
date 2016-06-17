@@ -27,7 +27,7 @@ export EDITOR=/usr/bin/vim
 export BROWSER=/usr/bin/palemoon
 
 alias ls='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -A'
+alias mkdir='mkdir -p'
 alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
@@ -107,3 +107,6 @@ alias dotfiles='mt ~/dotfiles/'
 alias scripts='mt ~/scripts/'
 alias mean='mt ~/projects/mean-demo/'
 alias means='mean; vi client/app.mdl.js'
+alias react='mt ~/projects/react-demo/'
+alias reacts='react; vi client/app/app.js'
+alias tag='ctags -R --exclude=.git --exclude=node_modules .'
