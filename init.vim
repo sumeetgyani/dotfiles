@@ -7,24 +7,26 @@ Plug 'neomake/neomake' "syntax checker on file save
 Plug 'jiangmiao/auto-pairs' "automatically add closing paren/quote
 Plug 'ervandew/supertab' "smart autocomplete with tab
 Plug 'Chiel92/vim-autoformat' "autoformat file
-Plug 'pangloss/vim-javascript' "better syntax/indent for js
-Plug 'othree/javascript-libraries-syntax.vim' "syntax for angular/lodash/etc.
 Plug 'mxw/vim-jsx' "jsx syntax highlighting
-Plug 'SirVer/ultisnips' "snippets
+Plug 'pangloss/vim-javascript' "better syntax/indent for js
+Plug 'othree/javascript-libraries-syntax.vim' "better syntax/indent for js
+" Plug 'SirVer/ultisnips' "snippets
 Plug 'ctrlpvim/ctrlp.vim' "fuzzy file finder
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } "distraction free writing
-Plug 'rking/ag.vim', { 'on': 'Ag' } "code searching tool
+Plug 'joonty/vim-phpqa' "php linter
+Plug 'StanAngeloff/php.vim' "php stuff (not sure if useful)
+Plug 'mileszs/ack.vim' "code search tool
 
 call plug#end()
 
 " My stuff
 filetype plugin indent on
 syntax on
-colorscheme one
 
 set incsearch ignorecase smartcase nohlsearch
 set relativenumber number
-set expandtab shiftwidth=2 softtabstop=2
+" set expandtab shiftwidth=2 softtabstop=2
+set tabstop=2 shiftwidth=2
 set wildmenu
 
 map ; :
@@ -45,6 +47,7 @@ nmap <leader>o o<esc>
 nmap <leader>s <C-w>v:terminal<cr>
 nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap <leader>w :Goyo<cr>
+nnoremap <leader>r : !gg-repo-sync %:p<CR>
 
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -52,3 +55,5 @@ let loaded_matchparen=1 "do not highlight matching paren
 let g:ctrlp_custom_ignore='node_modules/'
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:jsx_ext_required = 0
+" let g:phpqa_messdetector_ruleset = "/Users/sumeetgyani/metv-common/ops/php-linting/phpmd/ruleset.xml"
+" let g:phpqa_codesniffer_args = "--error-severity=1"
