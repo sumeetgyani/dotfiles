@@ -14,11 +14,12 @@ Plug 'pangloss/vim-javascript' "better syntax/indent for js
 Plug 'othree/javascript-libraries-syntax.vim' "better syntax/indent for js
 Plug 'ctrlpvim/ctrlp.vim' "fuzzy file finder
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } "distraction free writing
-" Plug 'joonty/vim-phpqa' "php linter
+Plug 'joonty/vim-phpqa' "php linter
 Plug 'StanAngeloff/php.vim' "better php stuff?
 Plug 'rking/ag.vim' "code searching tool
 Plug 'flazz/vim-colorschemes' "colorschemes
 Plug 'SirVer/ultisnips' "snippets
+Plug 'vim-scripts/ReplaceWithRegister' "let you repeat pasting
 
 call plug#end()
 
@@ -63,8 +64,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|lib'
 let g:ag_working_path_mode="r"
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:jsx_ext_required = 0
-" let g:phpqa_messdetector_ruleset = "/Users/sumeetgyani/metv-common/ops/php-linting/phpmd/ruleset.xml"
-" let g:phpqa_codesniffer_args = "--error-severity=1"
+let g:phpqa_messdetector_ruleset = "/Users/sumeetgyani/metv-common/ops/php-linting/phpmd/ruleset.xml"
+let g:phpqa_codesniffer_args = "--error-severity=1"
 " UltiSnips config
 inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:UltiSnipsExpandTrigger="<tab>"
