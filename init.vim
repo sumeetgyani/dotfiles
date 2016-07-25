@@ -14,7 +14,6 @@ Plug 'pangloss/vim-javascript' "better syntax/indent for js
 Plug 'othree/javascript-libraries-syntax.vim' "better syntax/indent for js
 Plug 'ctrlpvim/ctrlp.vim' "fuzzy file finder
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } "distraction free writing
-Plug 'joonty/vim-phpqa' "php linter
 Plug 'StanAngeloff/php.vim' "better php stuff?
 Plug 'rking/ag.vim' "code searching tool
 Plug 'flazz/vim-colorschemes' "colorschemes
@@ -26,7 +25,7 @@ call plug#end()
 " My stuff
 filetype plugin indent on
 syntax on
-colorscheme antares "ive changed php strings to green
+colorscheme mahowned
 
 set incsearch ignorecase smartcase nohlsearch
 set relativenumber number
@@ -35,8 +34,8 @@ set wildmenu
 set clipboard=unnamed
 
 map ; :
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nnoremap <C-e> 4<C-e>
+nnoremap <C-y> 4<C-y>
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 nmap Q @q
@@ -55,6 +54,7 @@ nmap <leader>cc :set colorcolumn=90<esc>
 nmap <leader>g :Goyo<cr>
 nmap <leader>y "*y
 nmap <leader>p "*p
+nmap <leader>d yip}o<esc>kp
 nnoremap <leader>r :!gg-repo-sync %:p<CR>
 
 autocmd! BufWritePost * Neomake
@@ -64,8 +64,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|lib'
 let g:ag_working_path_mode="r"
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:jsx_ext_required = 0
-let g:phpqa_messdetector_ruleset = "/Users/sumeetgyani/metv-common/ops/php-linting/phpmd/ruleset.xml"
-let g:phpqa_codesniffer_args = "--error-severity=1"
 " UltiSnips config
 inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:UltiSnipsExpandTrigger="<tab>"
