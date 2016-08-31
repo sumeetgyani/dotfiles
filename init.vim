@@ -13,12 +13,12 @@ Plug 'mxw/vim-jsx' "jsx syntax highlighting
 Plug 'pangloss/vim-javascript' "better syntax/indent for js
 Plug 'othree/javascript-libraries-syntax.vim' "better syntax/indent for js
 Plug 'ctrlpvim/ctrlp.vim' "fuzzy file finder
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } "distraction free writing
 Plug 'StanAngeloff/php.vim' "better php stuff?
 Plug 'rking/ag.vim' "code searching tool
 Plug 'flazz/vim-colorschemes' "colorschemes
 Plug 'SirVer/ultisnips' "snippets
 Plug 'vim-scripts/ReplaceWithRegister' "let you repeat pasting
+Plug 'tpope/vim-fugitive' "git stuff
 
 call plug#end()
 
@@ -41,6 +41,8 @@ nnoremap <C-h> <C-w>h
 nmap Q @q
 nmap j gj
 nmap k gk
+nmap n nzz
+nmap N Nzz
 nmap Y y$
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
 
@@ -52,7 +54,6 @@ nmap <leader>o o<esc>
 nmap <leader>s <C-w>v:terminal<cr>
 nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap <leader>cc :set colorcolumn=90<esc>
-nmap <leader>g :Goyo<cr>
 nmap <leader>y "*y
 nmap <leader>p "*p
 nmap <leader>d yip}o<esc>kp
