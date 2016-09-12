@@ -19,6 +19,7 @@ Plug 'flazz/vim-colorschemes' "colorschemes
 Plug 'SirVer/ultisnips' "snippets
 Plug 'vim-scripts/ReplaceWithRegister' "let you repeat pasting
 Plug 'tpope/vim-fugitive' "git stuff
+Plug 'godlygeek/tabular' "line up tabs
 
 call plug#end()
 
@@ -32,6 +33,7 @@ set relativenumber number
 set tabstop=2 shiftwidth=2
 set wildmenu
 set clipboard=unnamed
+set ruler
 
 map ; :
 nnoremap <C-e> 4<C-e>
@@ -64,7 +66,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let loaded_matchparen=1 "do not highlight matching paren
 let g:ctrlp_custom_ignore = 'node_modules\|lib'
 let g:ag_working_path_mode="r"
-let g:neomake_javascript_enabled_makers = ['jshint']
+let g:neomake_javascript_enabled_makers = ['eslint']
 let g:jsx_ext_required = 0
 " UltiSnips config
 inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
