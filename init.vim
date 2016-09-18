@@ -53,7 +53,6 @@ nmap <leader>a :Ag<space>
 nmap <leader>e <leader><leader>s
 nmap <leader>f :Autoformat esformatter<cr>
 nmap <leader>o o<esc>
-nmap <leader>s <C-w>v:terminal<cr>
 nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap <leader>cc :set colorcolumn=90<esc>
 nmap <leader>y "*y
