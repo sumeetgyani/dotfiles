@@ -5,8 +5,8 @@ SESSION_NAME='smashgg'
 tmux new-session -s ${SESSION_NAME} -n server -d
 
 # First window (0) -- server
-tmux send-keys -t ${SESSION_NAME}:0 'web' C-m
-tmux send-keys -t ${SESSION_NAME}:0 'serve' C-m
+tmux send-keys -t ${SESSION_NAME}:0 'clear' C-m
+tmux send-keys -t ${SESSION_NAME}:0 'web; serve' C-m
 
 # web (1)
 tmux new-window -n web -t ${SESSION_NAME}
@@ -26,9 +26,13 @@ tmux send-keys -t ${SESSION_NAME}:3.1 'dev' C-m
 tmux new-window -n bash -t ${SESSION_NAME}
 tmux send-keys -t ${SESSION_NAME}:4 'web' C-m
 
-# notes (5)
-tmux new-window -n notes -t ${SESSION_NAME}
-tmux send-keys -t ${SESSION_NAME}:5 'notes; ls' C-m
+# debug (5)
+tmux new-window -n debug -t ${SESSION_NAME}
+tmux send-keys -t ${SESSION_NAME}:5 'dev' C-m
+
+# files (6)
+tmux new-window -n files -t ${SESSION_NAME}
+tmux send-keys -t ${SESSION_NAME}:6 'dotfiles; ls' C-m
 
 # Start out on the first window when we attach
 tmux select-window -t ${SESSION_NAME}:0

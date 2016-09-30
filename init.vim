@@ -63,7 +63,7 @@ nnoremap <leader>r :!gg-repo-sync %:p<CR>
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let loaded_matchparen=1 "do not highlight matching paren
-let g:ctrlp_custom_ignore = 'node_modules\|lib'
+let g:ctrlp_custom_ignore = 'node_modules/\|lib/\|public/'
 let g:ag_working_path_mode="r"
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:jsx_ext_required = 0
