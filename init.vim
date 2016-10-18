@@ -45,6 +45,9 @@ nmap j gj
 nmap k gk
 nmap n nzz
 nmap N Nzz
+nmap <silent> * *zz
+nmap <silent> g* g*zz
+nmap <silent> # #zz
 nmap Y y$
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
 
