@@ -59,6 +59,8 @@ nmap <leader>y "*y
 nmap <leader>p "*p
 nmap <leader>d yip}o<esc>kp
 nnoremap <leader>r :!gg-repo-sync %:p<CR>
+" Save files that require root
+" cmap w!! %!sudo tee > /dev/null % 
 
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
