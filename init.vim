@@ -23,7 +23,7 @@ Plug 'godlygeek/tabular' "line up tabs
 
 call plug#end()
 
-" My stuff
+" Personal changes
 filetype plugin indent on
 syntax on
 colorscheme mahowned
@@ -34,23 +34,25 @@ set tabstop=2 shiftwidth=2
 set wildmenu
 set clipboard=unnamed
 set ruler
+set path+=**
 
 map ; :
-nnoremap <C-e> 4<C-e>
-nnoremap <C-y> 4<C-y>
-nnoremap <C-l> <C-w>l
-nnoremap <C-h> <C-w>h
-nmap Q @q
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
 nmap j gj
 nmap k gk
+nmap Q @q
+nmap Y y$
+nmap <C-f> :<C-f>i%s//gc<esc>hhi
+
+" centering after actions
 nmap n nzz
 nmap N Nzz
 nmap <silent> * *zz
 nmap <silent> g* g*zz
 nmap <silent> # #zz
-nmap Y y$
-nmap <C-f> :<C-f>i%s//gc<esc>hhi
 
+" leader commands
 let mapleader=' '
 nmap <leader>a :Ag<space>
 nmap <leader>e <leader><leader>s
@@ -58,12 +60,11 @@ nmap <leader>f :Autoformat esformatter<cr>
 nmap <leader>o o<esc>
 nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap <leader>cc :set colorcolumn=90<esc>
-nmap <leader>y "*y
-nmap <leader>p "*p
 nmap <leader>d yip}o<esc>kp
+nmap <leader>as :Tab /\sas<CR>
 nnoremap <leader>r :!gg-repo-sync %:p<CR>
 " Save files that require root
-" cmap w!! %!sudo tee > /dev/null % 
+" cmap w!! %!sudo tee > /dev/null %
 
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
