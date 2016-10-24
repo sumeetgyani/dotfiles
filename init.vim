@@ -66,6 +66,10 @@ nnoremap <leader>r :!gg-repo-sync %:p<CR>
 " Save files that require root
 " cmap w!! %!sudo tee > /dev/null %
 
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+
+
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let loaded_matchparen=1 "do not highlight matching paren
