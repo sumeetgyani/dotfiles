@@ -31,10 +31,10 @@ colorscheme mahowned
 set incsearch ignorecase smartcase nohlsearch
 set relativenumber number
 set tabstop=2 shiftwidth=2
-set wildmenu
-set clipboard=unnamed
-set ruler
 set path+=**
+set clipboard=unnamed
+set wildmenu
+set ruler
 
 map ; :
 nnoremap <C-e> 5<C-e>
@@ -45,7 +45,7 @@ nmap Q @q
 nmap Y y$
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
 
-" centering after actions
+" centering screen after actions
 nmap n nzz
 nmap N Nzz
 nmap <silent> * *zz
@@ -66,9 +66,9 @@ nnoremap <leader>r :!gg-repo-sync %:p<CR>
 " Save files that require root
 " cmap w!! %!sudo tee > /dev/null %
 
+" Make netrw work like nerdtree
 let g:netrw_banner=0
 let g:netrw_liststyle=3
-
 
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
