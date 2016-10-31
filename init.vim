@@ -66,6 +66,11 @@ nnoremap <leader>r :!gg-repo-sync %:p<CR>
 " Save files that require root
 " cmap w!! %!sudo tee > /dev/null %
 
+" Notes
+
+" init.vim is 'V
+" .bashrc is 'B
+
 " Make netrw work like nerdtree
 let g:netrw_banner=0
 let g:netrw_liststyle=3
