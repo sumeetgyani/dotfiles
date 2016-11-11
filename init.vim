@@ -20,6 +20,10 @@ Plug 'SirVer/ultisnips' "snippets
 Plug 'vim-scripts/ReplaceWithRegister' "let you repeat pasting
 Plug 'tpope/vim-fugitive' "git stuff
 Plug 'godlygeek/tabular' "line up tabs
+Plug 'majutsushi/tagbar' "outline of class
+Plug 'skwp/greplace.vim' "global find/replace
+
+
 
 call plug#end()
 
@@ -54,6 +58,7 @@ nmap <silent> # #zz
 
 " leader commands
 let mapleader=' '
+nmap <leader>t :TagbarOpenAutoClose<cr>
 nmap <leader>a :Ag<space>
 nmap <leader>e <leader><leader>s
 nmap <leader>f :Autoformat esformatter<cr>
@@ -62,14 +67,10 @@ nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap <leader>cc :set colorcolumn=90<esc>
 nmap <leader>d yip}o<esc>kp
 nmap <leader>as :Tab /\sas<CR>
+nmap <leader>= :Tab /=<CR>
 nnoremap <leader>r :!gg-repo-sync %:p<CR>
 " Save files that require root
 " cmap w!! %!sudo tee > /dev/null %
-
-" Notes
-
-" init.vim is 'V
-" .bashrc is 'B
 
 " Make netrw work like nerdtree
 let g:netrw_banner=0
@@ -87,3 +88,5 @@ inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" Make tagbar 2% prettier
+let g:tagbar_iconchars = ['▸', '▾']
