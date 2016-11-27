@@ -1,0 +1,29 @@
+#!/bin/sh
+SESSION_NAME='docker'
+
+# Create the session
+tmux new-session -s ${SESSION_NAME} -n server -d
+
+# First window (0) -- server
+tmux send-keys -t ${SESSION_NAME}:0
+
+# web (1)
+tmux new-window -n web -t ${SESSION_NAME}
+tmux send-keys -t ${SESSION_NAME}:1 'webs' C-m
+
+# api (2)
+tmux new-window -n api -t ${SESSION_NAME}
+tmux send-keys -t ${SESSION_NAME}:2 'apis' C-m
+
+# test route (3)
+tmux new-window -n test_route -t ${SESSION_NAME}
+tmux send-keys -t ${SESSION_NAME}:3 'api' C-m
+
+# bash (5)
+tmux new-window -n bash -t ${SESSION_NAME}
+tmux send-keys -t ${SESSION_NAME}:5 'docker ps' C-m
+
+# Start out on the first window when we attach
+tmux select-window -t ${SESSION_NAME}:0
+
+tmux attach

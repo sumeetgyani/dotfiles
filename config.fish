@@ -11,22 +11,19 @@ set METV "$SV_HOME/metv-common"
 
 fish_vi_key_bindings
 
-abbr --add c 'clear'
-abbr --add ls 'ls -lG'
-abbr --add v 'nvim'
+alias c 'clear'
+alias ls 'ls -lG'
+alias v 'nvim'
 
-abbr --add frc='nvim ~/.config/fish/config.fish'
-abbr --add nrc='nvim ~/.config/nvim/init.vim'
+alias frc='nvim ~/dotfiles/config.fish'
+alias nrc='nvim ~/.config/nvim/init.vim'
 
-abbr --add tags 'ctags -R --exclude=.git --exclude=node_modules --exclude=bower_components --exclude=vendor .'
-abbr --add sync 'api; gg-repo-sync'
-abbr --add serve 'sync; cd -; grunt server'
-abbr --add hack 'cmatrix'
-abbr --add dev 'ssh sumeet@dev.metv.bz'
-
-function develop
-	git checkout develop
-end
+alias tags 'ctags -R --exclude=.git --exclude=node_modules --exclude=bower_components --exclude=vendor .'
+alias sync 'api; gg-repo-sync'
+alias serve 'sync; cd -; grunt server'
+alias hack 'cmatrix'
+alias dev 'ssh sumeet@dev.metv.bz'
+alias develop 'git checkout develop'
 
 function both
 	eval $argv
@@ -39,22 +36,22 @@ function both
 	cd -
 end
 
-abbr --add notes 'cd ~/notes'
-abbr --add dotfiles 'cd ~/dotfiles'
-abbr --add api 'cd $API'
-abbr --add web 'cd $WEB'
-abbr --add metv 'cd $METV'
-abbr --add admin 'cd $WEB; cd admin'
-abbr --add apis 'api; v src/Entity/ContainerTag/DAO.class.php'
-abbr --add webs 'web; v common/app/components/forms/ValidatingForm.jsx'
-abbr --add script 'api; v tests/unit/RunScriptCest.php'
+alias notes 'cd ~/notes'
+alias dotfiles 'cd ~/dotfiles'
+alias api 'cd $API'
+alias web 'cd $WEB'
+alias metv 'cd $METV'
+alias admin 'cd $WEB; cd admin'
+alias apis 'api; nvim src/Entity/ContainerTag/DAO.class.php'
+alias webs 'web; nvim common/app/components/forms/ValidatingForm.jsx'
+alias script 'api; nvim tests/unit/RunScriptCest.php'
 
-abbr --add gs 'git status'
-abbr --add ga 'git add'
-abbr --add gc 'git commit -m'
-abbr --add gph 'git push'
-abbr --add gpl 'git pull'
-abbr --add gd 'git diff'
-abbr --add gb 'git branch'
-abbr --add gco 'git checkout'
-abbr --add gr 'git reset HEAD'
+alias gs 'git status'
+alias ga 'git add'
+alias gc 'git commit -m'
+alias gph 'git push'
+alias gpl 'git pull'
+alias gd 'git diff'
+alias gb 'git branch'
+alias gco 'git checkout'
+alias gr 'git reset HEAD'
