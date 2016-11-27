@@ -23,8 +23,6 @@ Plug 'godlygeek/tabular' "line up tabs
 Plug 'majutsushi/tagbar' "outline of class
 Plug 'skwp/greplace.vim' "global find/replace
 
-
-
 call plug#end()
 
 " Personal changes
@@ -41,13 +39,14 @@ set wildmenu
 set ruler
 
 map ; :
+nmap Q @q
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
 nmap j gj
 nmap k gk
-nmap Q @q
 nmap Y y$
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
+vmap y ygv<esc>
 
 " centering screen after actions
 nmap n nzz
@@ -69,13 +68,12 @@ nmap <leader>d yip}o<esc>kp
 nmap <leader>as :Tab /\sas<CR>
 nmap <leader>= :Tab /=<CR>
 nnoremap <leader>r :!gg-repo-sync %:p<CR>
-" Save files that require root
-" cmap w!! %!sudo tee > /dev/null %
 
 " Make netrw work like nerdtree
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 
+" Plugin options
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let loaded_matchparen=1 "do not highlight matching paren
@@ -83,10 +81,8 @@ let g:ctrlp_custom_ignore = 'bower_components/\|node_modules/\|lib/\|public/'
 let g:ag_working_path_mode="r"
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:jsx_ext_required = 0
-" UltiSnips config
-inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>" 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" Make tagbar 2% prettier
 let g:tagbar_iconchars = ['▸', '▾']
