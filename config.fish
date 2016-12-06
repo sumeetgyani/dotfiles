@@ -25,6 +25,10 @@ alias hack 'cmatrix'
 alias dev 'ssh sumeet@dev.metv.bz'
 alias develop 'git checkout develop'
 
+function !!
+	eval sudo $history[1]
+end
+
 function both
 	eval $argv
 	if [ $PWD = $WEB ]

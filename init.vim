@@ -22,6 +22,10 @@ Plug 'tpope/vim-fugitive' "git stuff
 Plug 'godlygeek/tabular' "line up tabs
 Plug 'majutsushi/tagbar' "outline of class
 Plug 'skwp/greplace.vim' "global find/replace
+Plug 'dag/vim-fish' "fish syntax highlighting
+Plug 'junegunn/limelight.vim' "highlight text
+Plug 'xolox/vim-misc' "required for notes
+Plug 'xolox/vim-notes' "notes
 
 call plug#end()
 
@@ -40,13 +44,15 @@ set ruler
 
 map ; :
 nmap Q @q
-nnoremap <C-e> 5<C-e>
-nnoremap <C-y> 5<C-y>
+nmap <C-e> 5<C-e>
+nmap <C-y> 5<C-y>
 nmap j gj
 nmap k gk
+nmap ' `
 nmap Y y$
 nmap <C-f> :<C-f>i%s//gc<esc>hhi
 vmap y ygv<esc>
+vmap . :normal .<CR>
 
 " centering screen after actions
 nmap n nzz
@@ -57,6 +63,7 @@ nmap <silent> # #zz
 
 " leader commands
 let mapleader=' '
+nmap <leader>!! :w !sudo tee % > /dev/null
 nmap <leader>t :TagbarOpenAutoClose<cr>
 nmap <leader>a :Ag<space>
 nmap <leader>e <leader><leader>s
@@ -67,7 +74,7 @@ nmap <leader>cc :set colorcolumn=90<esc>
 nmap <leader>d yip}o<esc>kp
 nmap <leader>as :Tab /\sas<CR>
 nmap <leader>= :Tab /=<CR>
-nnoremap <leader>r :!gg-repo-sync %:p<CR>
+nmap <leader>r :!gg-repo-sync %:p<CR>
 
 " Make netrw work like nerdtree
 let g:netrw_banner=0
