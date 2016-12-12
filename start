@@ -6,15 +6,15 @@ tmux new-session -s ${SESSION_NAME} -n server -d
 
 # First window (0) -- server
 tmux send-keys -t ${SESSION_NAME}:0 'clear' C-m
-tmux send-keys -t ${SESSION_NAME}:0 'web; serve' C-m
+tmux send-keys -t ${SESSION_NAME}:0 'web' C-m
 
 # web (1)
 tmux new-window -n web -t ${SESSION_NAME}
-tmux send-keys -t ${SESSION_NAME}:1 'webs' C-m
+tmux send-keys -t ${SESSION_NAME}:1 'web' C-m
 
 # api (2)
 tmux new-window -n api -t ${SESSION_NAME}
-tmux send-keys -t ${SESSION_NAME}:2 'apis' C-m
+tmux send-keys -t ${SESSION_NAME}:2 'api' C-m
 
 # script and dev (3)
 tmux new-window -n script -t ${SESSION_NAME}
@@ -32,7 +32,7 @@ tmux send-keys -t ${SESSION_NAME}:5 'web' C-m
 
 # files (6)
 tmux new-window -n files -t ${SESSION_NAME}
-tmux send-keys -t ${SESSION_NAME}:6 'dotfiles; ls' C-m
+tmux send-keys -t ${SESSION_NAME}:6 'dotfiles' C-m
 
 # Start out on the first window when we attach
 tmux select-window -t ${SESSION_NAME}:0

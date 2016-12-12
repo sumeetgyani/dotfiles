@@ -4,6 +4,7 @@ set --export SV_HOME "/Users/sumeetgyani/development"
 set --export SV_KEY_DIR "$HOME/keypairs"
 set --export PATH "$HOME/pear/bin" $PATH
 set --export PATH "$SV_HOME/gg-api/ops/docker/bin" $PATH
+set --export PATH "$SV_HOME/gg-api/ops/docker/hhvm/bin" $PATH
 
 set API "$SV_HOME/gg-api"
 set WEB "$SV_HOME/gg-web"

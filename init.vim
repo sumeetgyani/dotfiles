@@ -44,8 +44,8 @@ set ruler
 
 map ; :
 nmap Q @q
-nmap <C-e> 5<C-e>
-nmap <C-y> 5<C-y>
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
 nmap j gj
 nmap k gk
 nmap ' `
@@ -63,7 +63,7 @@ nmap <silent> # #zz
 
 " leader commands
 let mapleader=' '
-nmap <leader>!! :w !sudo tee % > /dev/null
+nmap <leader>su :w !sudo tee % > /dev/null<CR>
 nmap <leader>t :TagbarOpenAutoClose<cr>
 nmap <leader>a :Ag<space>
 nmap <leader>e <leader><leader>s
