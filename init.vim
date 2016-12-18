@@ -65,14 +65,14 @@ nmap <silent> # #zz
 let mapleader=' '
 nmap <leader>su :w !sudo tee % > /dev/null<CR>
 nmap <leader>t :TagbarOpenAutoClose<cr>
-nmap <leader>a :Ag<space>
+nmap <leader>ag :Ag<space>'
 nmap <leader>e <leader><leader>s
 nmap <leader>f :Autoformat esformatter<cr>
 nmap <leader>o o<esc>
 nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap <leader>cc :set colorcolumn=90<esc>
 nmap <leader>d yip}o<esc>kp
-nmap <leader>as :Tab /\sas<CR>
+nmap <leader>as :Tabularize /\sas<CR>
 nmap <leader>= :Tab /=<CR>
 nmap <leader>r :!gg-repo-sync %:p<CR>
 

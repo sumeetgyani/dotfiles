@@ -2,6 +2,8 @@ set --export SV_DEV_USERNAME "sumeet"
 set --export SV_REMOTE_HOME "/home/sumeet/repos"
 set --export SV_HOME "/Users/sumeetgyani/development"
 set --export SV_KEY_DIR "$HOME/keypairs"
+set --export AWS_ACCESS_KEY_ID "AKIAIYLH26OUB5DUEGOA"
+set --export AWS_SECRET_ACCESS_KEY "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"
 set --export PATH "$HOME/pear/bin" $PATH
 set --export PATH "$SV_HOME/gg-api/ops/docker/bin" $PATH
 set --export PATH "$SV_HOME/gg-api/ops/docker/hhvm/bin" $PATH
@@ -15,6 +17,7 @@ fish_vi_key_bindings
 alias c 'clear'
 alias ls 'ls -lG'
 alias v 'nvim'
+alias hosts 'nvim /etc/hosts'
 
 alias frc='nvim ~/dotfiles/config.fish'
 alias nrc='nvim ~/.config/nvim/init.vim'
