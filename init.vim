@@ -42,6 +42,12 @@ set clipboard=unnamed
 set wildmenu
 set ruler
 
+" Abbreviations
+abbr cine cinematography
+abbr Cine Cinematography
+abbr chars characters
+abbr Chars Characters
+
 map ; :
 nmap Q @q
 nnoremap <C-e> 5<C-e>

@@ -12,6 +12,7 @@ set METV "$SV_HOME/metv-common"
 
 fish_vi_key_bindings
 
+alias mdkir 'mkdir'
 alias c 'clear'
 alias ls 'ls -lG'
 alias v 'nvim'
