@@ -24,8 +24,6 @@ Plug 'majutsushi/tagbar' "outline of class
 Plug 'skwp/greplace.vim' "global find/replace
 Plug 'dag/vim-fish' "fish syntax highlighting
 Plug 'junegunn/limelight.vim' "highlight text
-Plug 'xolox/vim-misc' "required for notes
-Plug 'xolox/vim-notes' "notes
 
 call plug#end()
 
