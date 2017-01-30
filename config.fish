@@ -5,6 +5,8 @@ set --export SV_KEY_DIR "$HOME/keypairs"
 set --export PATH "$HOME/pear/bin" $PATH
 set --export PATH "$SV_HOME/gg-api/ops/docker/bin" $PATH
 set --export PATH "$SV_HOME/gg-api/ops/docker/hhvm/bin" $PATH
+set --export VISUAL nvim
+set --export EDITOR "$VISUAL"
 
 set API "$SV_HOME/gg-api"
 set WEB "$SV_HOME/gg-web"
@@ -22,7 +24,7 @@ alias nrc='nvim ~/.config/nvim/init.vim'
 
 alias tags 'ctags -R --exclude=.git --exclude=node_modules --exclude=bower_components --exclude=vendor .'
 alias sync 'api; gg-repo-sync'
-alias serve 'sync; cd -; grunt server'
+alias serve 'grunt server'
 alias hack 'cmatrix'
 alias dev 'ssh sumeet@dev.metv.bz'
 alias develop 'git checkout develop'
@@ -42,8 +44,11 @@ function both
 	cd -
 end
 
+# grunt deploy-beanstalk:staging:react-v15-sumeet
+
 alias notes 'cd ~/notes'
 alias dotfiles 'cd ~/dotfiles'
+alias home 'cd $SV_HOME'
 alias api 'cd $API'
 alias web 'cd $WEB'
 alias metv 'cd $METV'

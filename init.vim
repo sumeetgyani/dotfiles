@@ -24,8 +24,7 @@ Plug 'majutsushi/tagbar' "outline of class
 Plug 'skwp/greplace.vim' "global find/replace
 Plug 'dag/vim-fish' "fish syntax highlighting
 Plug 'junegunn/limelight.vim' "highlight text
-Plug 'xolox/vim-misc' "required for notes
-Plug 'xolox/vim-notes' "notes
+Plug 'vim-scripts/fountain.vim' "syntax for fountain files
 
 call plug#end()
 
@@ -41,6 +40,15 @@ set path+=**
 set clipboard=unnamed
 set wildmenu
 set ruler
+
+" Move to another file if it gets to big and make function for duplication and creating abbr from command mode
+abbr bc because
+abbr Bc Because
+abbr intro introduction
+abbr Intro Introduction
+abbr k the
+abbr K the
+abbr f function
 
 map ; :
 nmap Q @q
@@ -65,7 +73,7 @@ nmap <silent> # #zz
 let mapleader=' '
 nmap <leader>su :w !sudo tee % > /dev/null<CR>
 nmap <leader>t :TagbarOpenAutoClose<cr>
-nmap <leader>ag :Ag<space>'
+nmap <leader>ag :Ag<space>
 nmap <leader>e <leader><leader>s
 nmap <leader>f :Autoformat esformatter<cr>
 nmap <leader>o o<esc>
@@ -73,14 +81,16 @@ nmap <leader>sc :set spell spelllang=en_us<esc>
 nmap <leader>cc :set colorcolumn=90<esc>
 nmap <leader>d yip}o<esc>kp
 nmap <leader>as :Tabularize /\sas<CR>
-nmap <leader>= :Tab /=<CR>
+nmap <leader>= :Tabularize /=<CR>
 nmap <leader>r :!gg-repo-sync %:p<CR>
+nmap <leader>l :Limelight!!<CR>
 
 " Make netrw work like nerdtree
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 
 " Plugin options
+au BufRead,BufNewFile *.fountain	set filetype=fountain
 autocmd! BufWritePost * Neomake
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let loaded_matchparen=1 "do not highlight matching paren
