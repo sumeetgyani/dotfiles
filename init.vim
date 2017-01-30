@@ -49,6 +49,10 @@ abbr Intro Introduction
 abbr k the
 abbr K the
 abbr f function
+abbr cine cinematography
+abbr Cine Cinematography
+abbr chars characters
+abbr Chars Characters
 
 map ; :
 nmap Q @q
