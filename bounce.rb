@@ -16,7 +16,8 @@ begin
 	user_choice = $stdin.gets.chomp.to_i
 	if user_choice === 0
 		puts "\nRunnings scripts:"
-		puts `ps aux | grep -v "^grep" | grep ".*\.php"`
+		# Only show processes that start with "php" or "hhvm"
+		puts `ps -e -o command | grep "^php|^hhvm"`
 	else
 		chosen_container = running_containers[user_choice-1]
 		puts "Restarting #{chosen_container}" 
