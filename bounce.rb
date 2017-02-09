@@ -1,9 +1,7 @@
 #!/usr/bin/ruby
 
-# Get all running containers
-running_containers = `docker inspect --format='{{.Name}}' $(sudo docker ps -q --no-trunc)`.lines
-# Removing leading slash in name because docker restart cannot except that format
-running_containers.map! {|container| container[1..-1]}
+# Get all running containers and removing leading slash in name because docker restart cannot except that format
+running_containers = `docker inspect --format='{{.Name}}' $(sudo docker ps -q --no-trunc)`.lines.map! {|container| container[1..-1]}
 
 puts "\nRunnings scripts:"
 puts "================="
