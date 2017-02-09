@@ -25,6 +25,7 @@ Plug 'skwp/greplace.vim' "global find/replace
 Plug 'dag/vim-fish' "fish syntax highlighting
 Plug 'junegunn/limelight.vim' "highlight text
 Plug 'vim-scripts/fountain.vim' "syntax for fountain files
+Plug 'reedes/vim-wordy' "fix wordy writing
 
 call plug#end()
 
