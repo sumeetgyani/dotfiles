@@ -17,7 +17,7 @@ begin
 	if user_choice === 0
 		puts "\nRunnings scripts:"
 		# Only show processes that start with "php" or "hhvm"
-		puts `ps -e -o command | grep "^php|^hhvm"`
+		puts `ps -e -o command | grep "^php\|^hhvm"`
 	else
 		chosen_container = running_containers[user_choice-1]
 		puts "Restarting #{chosen_container}" 
