@@ -54,6 +54,8 @@ abbr cine cinematography
 abbr Cine Cinematography
 abbr chars characters
 abbr Chars Characters
+abbr $t $tournament
+abbr $e $event
 
 map ; :
 nmap Q @q
@@ -78,7 +80,7 @@ nmap <silent> # #zz
 let mapleader=' '
 nmap <leader>su :w !sudo tee % > /dev/null<CR>
 nmap <leader>t :TagbarOpenAutoClose<cr>
-nmap <leader>ag :Ag<space>
+nmap <leader>p :Ag<space>'
 nmap <leader>e <leader><leader>s
 nmap <leader>f :Autoformat esformatter<cr>
 nmap <leader>o o<esc>
