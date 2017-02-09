@@ -9,8 +9,8 @@ puts "================="
 # TODO figure out why the or operator doesn't work with grep
 puts `ps -e -o command | grep "^php "`
 puts `ps -e -o command | grep "^hhvm "`
-running_containers.each_with_index do |container, index|
-	puts (index+1).to_s + ') ' + container
+running_containers.each_with_index do |container_name, index|
+	puts (index+1).to_s + ') ' + container_name
 end
 puts 'q) quit'
 
