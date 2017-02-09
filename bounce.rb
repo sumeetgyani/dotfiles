@@ -16,7 +16,7 @@ begin
 	user_choice = $stdin.gets.chomp.to_i
 	if user_choice === 0
 		puts "\nRunnings scripts:"
-		puts `ps aux | grep -v grep | grep ".*\.php"`
+		puts `ps aux | grep -v "^grep" | grep ".*\.php"`
 	else
 		chosen_container = running_containers[user_choice-1]
 		puts "Restarting #{chosen_container}" 
