@@ -14,6 +14,7 @@ begin
 		puts "\nRunnings scripts:"
 		puts "================="
 		# Only show processes that start with "php" or "hhvm"
+		# TODO figure out why the or operator doesn't work with grep
 		puts `ps -e -o command | grep "^php "`
 		puts `ps -e -o command | grep "^hhvm "`
 	else
