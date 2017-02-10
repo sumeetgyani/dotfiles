@@ -32,7 +32,7 @@ while !isValid(user_choice, running_containers.length)
 	user_choice = $stdin.gets.chomp
 end
 
-return if user_choice == 'q'
+abort if user_choice == 'q'
 chosen_container = running_containers[user_choice.to_i-1]
 puts "Restarting #{chosen_container}"
 puts `docker restart #{chosen_container}`
