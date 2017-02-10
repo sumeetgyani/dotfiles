@@ -3,20 +3,12 @@
 # Get all running containers and removing leading slash in name because docker restart cannot except that format
 running_containers = `docker inspect --format='{{.Name}}' $(sudo docker ps -q --no-trunc)`.lines.map! {|container| container[1..-1]}
 
+puts "\nRunnings scripts:"
+puts "================="
 # Only show processes that start with "php" or "hhvm"
 # TODO figure out why the or operator doesn't work with grep
-scripts = `ps -e -o command | grep "^php .*\.php"`.lines
-scripts.concat `ps -e -o command | grep "^hhvm .*\.php"`.lines
-
-puts # add empty line for readability
-if scripts.empty?
-	puts "No currently running scripts!"
-else
-	puts "Currently running scripts: " 
-	puts scripts
-end
-
-puts # add empty line for readability
+puts `ps -e -o command | grep "^php "`
+puts `ps -e -o command | grep "^hhvm "`
 running_containers.each_with_index do |container_name, index|
 	puts (index+1).to_s + ') ' + container_name
 end
