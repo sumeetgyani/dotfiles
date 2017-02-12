@@ -14,6 +14,8 @@ compinit
 # End of lines added by compinstall
 
 # My stuff
+autoload -U promptinit; promptinit
+prompt pure
 export VISUAL=nvim
 export EDITOR=nvim
 
