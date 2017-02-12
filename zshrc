@@ -12,5 +12,10 @@ zstyle :compinstall filename '/Users/sumeetgyani/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+bindkey ' ' magic-space 
+alias c='clear'
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
