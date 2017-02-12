@@ -42,21 +42,6 @@ set clipboard=unnamed
 set wildmenu
 set ruler
 
-" Move to another file if it gets to big and make function for duplication and creating abbr from command mode
-abbr bc because
-abbr Bc Because
-abbr intro introduction
-abbr Intro Introduction
-abbr k the
-abbr K the
-abbr f function
-abbr cine cinematography
-abbr Cine Cinematography
-abbr chars characters
-abbr Chars Characters
-abbr $t $tournament
-abbr $e $event
-
 map ; :
 nmap Q @q
 nnoremap <C-e> 5<C-e>
