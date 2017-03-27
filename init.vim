@@ -21,7 +21,6 @@ Plug 'vim-scripts/ReplaceWithRegister' "let you repeat pasting
 Plug 'tpope/vim-fugitive' "git stuff
 Plug 'godlygeek/tabular' "line up tabs
 Plug 'majutsushi/tagbar' "outline of class
-Plug 'skwp/greplace.vim' "global find/replace
 Plug 'dag/vim-fish' "fish syntax highlighting
 Plug 'junegunn/limelight.vim' "highlight text
 Plug 'vim-scripts/fountain.vim' "syntax for fountain files
