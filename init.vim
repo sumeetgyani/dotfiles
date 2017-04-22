@@ -18,11 +18,15 @@ Plug 'flazz/vim-colorschemes' "colorschemes
 Plug 'SirVer/ultisnips' "snippets
 Plug 'vim-scripts/ReplaceWithRegister' "let you repeat pasting
 Plug 'tpope/vim-fugitive' "git stuff
+Plug 'tpope/vim-rhubarb' "to make Gbrowse work?
 Plug 'godlygeek/tabular' "line up tabs
 Plug 'vim-scripts/fountain.vim' "syntax for fountain files
 Plug 'reedes/vim-wordy' "fix wordy writing
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finder requirement
 Plug 'junegunn/fzf.vim' "fuzzy finder
+Plug 'xolox/vim-misc' "ctag updater requirement
+Plug 'xolox/vim-easytags' "ctag updater
+
 
 call plug#end()
 
@@ -47,11 +51,11 @@ nmap j gj
 nmap k gk
 nmap ' `
 nmap Y y$
-nmap <C-f> :<C-f>i%s//gc<esc>hhi
-nmap <C-p> :Files<CR>
-nmap <C-t> :Tags<CR>
+nmap <C-p> :FzfFiles<CR>
+nmap <C-t> :FzfTags<CR>
 vmap y ygv<esc>
 vmap . :normal .<CR>
+imap <C-x><C-k> <plug>(fzf-complete-word)
 
 " centering screen after actions
 nmap n nzz
@@ -62,8 +66,9 @@ nmap <silent> # #zz
 
 " leader commands
 let mapleader=' '
+nmap <leader>p :FzfAg<CR>
 nmap <leader>sw :w !sudo tee % > /dev/null<CR>
-nmap <leader>l :Lines<cr>
+nmap <leader>l :FzfBLines<cr>
 nmap <leader>e <leader><leader>s
 nmap <leader>f :Autoformat esformatter<cr>
 nmap <leader>sc :set spell spelllang=en_us<esc>
@@ -90,3 +95,4 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:tagbar_iconchars = ['▸', '▾']
+let g:fzf_command_prefix = 'Fzf'

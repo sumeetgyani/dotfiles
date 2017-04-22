@@ -18,10 +18,12 @@ autoload -U promptinit; promptinit
 prompt pure
 export VISUAL=nvim
 export EDITOR=nvim
+setopt  HIST_IGNORE_ALL_DUPS
 
 alias mdkir='mkdir'
 alias c='clear'
 alias ls='ls -lG'
+alias ll='ls -lG'
 alias v='nvim'
 alias hack='cmatrix'
 alias notes='cd ~/notes'
@@ -38,7 +40,7 @@ alias gd='git diff'
 alias gb='git branch'
 alias gco='git checkout'
 alias gr='git reset HEAD'
-alias grm='git rm'
+alias gv='v $(git diff --name-only | fzf)'
 
 # Work specific commands
 source ~/dotfiles/workrc
@@ -47,3 +49,5 @@ source ~/dotfiles/workrc
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
