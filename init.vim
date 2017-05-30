@@ -24,9 +24,7 @@ Plug 'vim-scripts/fountain.vim' "syntax for fountain files
 Plug 'reedes/vim-wordy' "fix wordy writing
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finder requirement
 Plug 'junegunn/fzf.vim' "fuzzy finder
-Plug 'xolox/vim-misc' "ctag updater requirement
-Plug 'xolox/vim-easytags' "ctag updater
-
+Plug 'junegunn/goyo.vim' "distraction free writing
 
 call plug#end()
 
@@ -94,5 +92,4 @@ inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:tagbar_iconchars = ['▸', '▾']
 let g:fzf_command_prefix = 'Fzf'

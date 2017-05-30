@@ -18,7 +18,8 @@ autoload -U promptinit; promptinit
 prompt pure
 export VISUAL=nvim
 export EDITOR=nvim
-setopt  HIST_IGNORE_ALL_DUPS
+export GG_GCP_USERNAME=sumeet
+setopt HIST_IGNORE_ALL_DUPS
 
 alias mdkir='mkdir'
 alias c='clear'
@@ -51,3 +52,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sumeetgyani/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sumeetgyani/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sumeetgyani/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/sumeetgyani/google-cloud-sdk/completion.zsh.inc'; fi
