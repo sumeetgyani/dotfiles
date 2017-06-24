@@ -1,6 +1,7 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'mustache/vim-mustache-handlebars' "mustache syntax highlighting
 Plug 'tpope/vim-commentary' "commenting out text as motion
 Plug 'tpope/vim-surround' "add/change surrounding elements, such as doublequotes
 Plug 'tpope/vim-repeat' "allow dot operator on some other plugins
@@ -25,6 +26,7 @@ Plug 'reedes/vim-wordy' "fix wordy writing
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finder requirement
 Plug 'junegunn/fzf.vim' "fuzzy finder
 Plug 'junegunn/goyo.vim' "distraction free writing
+Plug 'martinda/Jenkinsfile-vim-syntax' "Jenkinsfile syntax highlighting
 
 call plug#end()
 
@@ -43,6 +45,7 @@ set ruler
 
 map ; :
 nmap Q @q
+nmap R gr$
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
 nmap j gj
@@ -50,7 +53,6 @@ nmap k gk
 nmap ' `
 nmap Y y$
 nmap <C-p> :FzfFiles<CR>
-nmap <C-t> :FzfTags<CR>
 vmap y ygv<esc>
 vmap . :normal .<CR>
 imap <C-x><C-k> <plug>(fzf-complete-word)
@@ -67,6 +69,7 @@ let mapleader=' '
 nmap <leader>p :FzfAg<CR>
 nmap <leader>sw :w !sudo tee % > /dev/null<CR>
 nmap <leader>l :FzfBLines<cr>
+nmap <leader>t :FzfTags<CR>
 nmap <leader>e <leader><leader>s
 nmap <leader>f :Autoformat esformatter<cr>
 nmap <leader>sc :set spell spelllang=en_us<esc>
