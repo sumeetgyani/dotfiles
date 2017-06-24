@@ -43,9 +43,6 @@ alias gco='git checkout'
 alias gr='git reset HEAD'
 alias gv='v $(git diff --name-only | fzf)'
 
-# Work specific commands
-source ~/dotfiles/workrc
-
 # Plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -58,3 +55,7 @@ if [ -f '/Users/sumeetgyani/google-cloud-sdk/path.zsh.inc' ]; then source '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/sumeetgyani/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/sumeetgyani/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Work specific commands
+source ~/dotfiles/workrc
+
