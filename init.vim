@@ -27,6 +27,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finder 
 Plug 'junegunn/fzf.vim' "fuzzy finder
 Plug 'junegunn/goyo.vim' "distraction free writing
 Plug 'martinda/Jenkinsfile-vim-syntax' "Jenkinsfile syntax highlighting
+Plug 'airblade/vim-rooter' "Always use git to find root of project
 
 call plug#end()
 
