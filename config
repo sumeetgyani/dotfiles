@@ -1,0 +1,55 @@
+# i3 GENERAL SETTINGS
+# ===================
+set $mod Mod4
+font xft:URWGothic-Book 11
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bar {
+        status_command i3status
+}
+
+# WORKSPACES
+# ==========
+set $ws1 "Work"
+set $ws2 "Play"
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+
+# WINDOW MANIPULATION
+# ===================
+floating_modifier $mod
+bindsym $mod+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym k resize shrink width 5 px or 5 ppt
+        bindsym j resize grow width 5 px or 5 ppt
+        bindsym Return mode "default"
+}
+
+# NAVIGATION
+# ==========
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+l move right
+
+# APPLICATIONS
+# ============
+bindsym $mod+Return exec urxvt -e zsh
+bindsym $mod+c exec chromium &
+bindsym $mod+d exec rofi -show run
+
+# AUTOSTART
+# =========
+exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
+exec --no-startup-id feh --bg-scale ~/Pictures/brain.jpg
+exec --no-startup-id autocutsel
+# Fix manjaro not setting monitor resolution correctly
+exec --no-startup-id xrandr --output DP-4 --mode 5120x1440
+
