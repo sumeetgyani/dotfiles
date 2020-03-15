@@ -1,7 +1,0 @@
-set surround
-set clipboard+=unnamed
-
-map ; :
-nmap Q @q
-nmap <C-e> 5<C-e>
-nmap <C-y> 5<C-y>
