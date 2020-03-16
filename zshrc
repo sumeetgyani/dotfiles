@@ -10,7 +10,7 @@ antigen apply
 # FZF CONFIG
 # =======
 export FZF_DEFAULT_OPTS="
---preview 'bat --color=always --style=header,grid {}' 
+--preview 'bat --theme=ansi-dark --color=always --style=header,grid {}' 
 --preview-window=up:80%
 " 
 
