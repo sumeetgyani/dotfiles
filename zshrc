@@ -7,6 +7,13 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme blinks
 antigen apply
 
+# FZF CONFIG
+# =======
+export FZF_DEFAULT_OPTS="
+--preview 'bat --color=always --style=header,grid {}' 
+--preview-window=up:80%
+" 
+
 
 # ALIASES
 # =======
@@ -31,3 +38,4 @@ alias gpl='git pull'
 alias gd='git diff'
 alias gb='git branch'
 alias gco='git checkout'
+
